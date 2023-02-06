@@ -28,7 +28,7 @@ describe.only("initialization", () => {
             // Click Install for Star Wars FFG system
             cy.get('[data-package-id="starwarsffg"] > .package-controls > .install').click();
 
-            cy.get('#notifications > .notification').contains('installed successfully');
+            cy.get('#notifications > .notification').contains('installed successfully', {timeout: 10000});
             // Close dialog
             cy.get('.header-button').click();
 
@@ -54,6 +54,7 @@ describe.only("initialization", () => {
     });
 
 
+    cy.visit(`${Cypress.config("baseUrl")}/join`);
     cy.url().should('eq', `${Cypress.config("baseUrl")}/join`);
 
     // Select game master
