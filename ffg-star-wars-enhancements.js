@@ -19,6 +19,7 @@ import { init as shop_generator_init, ready as shop_sheet_ready } from "./script
 import { stim_sync} from "./scripts/stim_sync.js";
 import { minionsize_sync } from "./scripts/minionsize_sync.js";
 import { register_controls } from "./scripts/controls_layer.js";
+import { init as xp_init } from "./scripts/spend_xp.js";
 
 Hooks.once('init', async function() {
     log('base_module', 'Initializing');
@@ -33,6 +34,7 @@ Hooks.once('init', async function() {
     opening_crawl_init();
     shop_generator_init();
     hyperspace_init();
+    xp_init();
 
     log('base_module', 'registering helpers');
     Handlebars.registerHelper("iff_custom", function (a, operator, b, opts) {

@@ -1,0 +1,6 @@
+<nav class="tabs">
+    {{#each this.steps as |step|}}
+        <button class="tablinks" data-tab_app-index='{{step.index}}'> {{step.title}}</button>
+    {{/each}}
+    <button class="tablinks" data-tab_app-submit> submit </button>
+</nav>

@@ -4,6 +4,7 @@ import {create_datapad_journal} from "./datapads.js";
 import {shop_creator} from "./shop.js";
 import {configure_attack_animation} from "./animation.js";
 import {convert_to_hologram} from "./hologram.js";
+import {spend_xp} from "./spend_xp.js";
 
 export const register_controls = controls => {
     if (canvas === null) {
@@ -59,6 +60,15 @@ export const register_controls = controls => {
                 button: true,
                 onClick: () => {
                     select_hyperspace();
+                },
+            },
+          {
+                name: "spend XP",
+                title: "spend XP",
+                icon: "fas fa-rocket",
+                button: true,
+                onClick: () => {
+                    spend_xp();
                 },
             },
         ],
