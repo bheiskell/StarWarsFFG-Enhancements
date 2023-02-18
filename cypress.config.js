@@ -7,10 +7,7 @@ module.exports = defineConfig({
      * https://stackoverflow.com/questions/47262338/overriding-configuration-variables-from-cypress-env-json
      */
     setupNodeEvents(on, config) {
-      if (
-        config.hasOwnProperty("env") &&
-        config.env.hasOwnProperty("baseUrl")
-      ) {
+      if (config.hasOwnProperty("env") && config.env.hasOwnProperty("baseUrl")) {
         config.baseUrl = config.env.baseUrl;
       }
       return config;

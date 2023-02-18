@@ -4,7 +4,7 @@
  * @returns val
  */
 export function setting_image(val) {
-    return val;
+  return val;
 }
 
 /**
@@ -13,12 +13,10 @@ export function setting_image(val) {
  * @returns val
  */
 export function setting_audio(val) {
-    return val;
+  return val;
 }
 
 /**
  * Placeholder for any initialization code
  */
-export function init() {
-
-}
+export function init() {}

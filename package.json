@@ -18,5 +18,8 @@
   "homepage": "https://github.com/wrycu/StarWarsFFG-Enhancements",
   "devDependencies": {
     "cypress": "^12.5.1"
+  },
+  "dependencies": {
+    "prettier": "^2.8.4"
   }
 }

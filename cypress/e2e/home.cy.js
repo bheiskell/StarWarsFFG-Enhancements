@@ -34,9 +34,7 @@ function installsModule($moduleList, module) {
   if ($moduleList.find(`[data-package-id="${module}"]`).length) {
     return;
   }
-  cy.get(
-    `[data-package-id="${module}"] > .package-controls > .install`
-  ).click();
+  cy.get(`[data-package-id="${module}"] > .package-controls > .install`).click();
   cy.get("#notifications > .notification").contains("installed successfully", {
     timeout: 25000,
   });
@@ -64,14 +62,9 @@ function handlesSetup() {
 
       cy.get(".active > .setup-footer > .install-package").click();
 
-      cy.get(
-        '[data-package-id="starwarsffg"] > .package-controls > .install'
-      ).click();
+      cy.get('[data-package-id="starwarsffg"] > .package-controls > .install').click();
 
-      cy.get("#notifications > .notification").contains(
-        "installed successfully",
-        { timeout: 25000 }
-      );
+      cy.get("#notifications > .notification").contains("installed successfully", { timeout: 25000 });
 
       cy.get(".header-button.close").click();
     });
@@ -94,31 +87,22 @@ function handlesSetup() {
     cy.get('.sheet-tabs > [data-tab="worlds"]').click();
     cy.get("#world-list").then(($worldList) => {
       // World already exists
-      if (
-        $worldList.find('[data-package-id="integration-test-world"]').length
-      ) {
+      if ($worldList.find('[data-package-id="integration-test-world"]').length) {
         return;
       }
 
       cy.get("#create-world").click();
 
       // Something interrupts focus during the load, so forcing the typing
-      cy.get('#world-config form input[name="title"]').type(
-        "Integration Test World",
-        { force: true }
-      );
+      cy.get('#world-config form input[name="title"]').type("Integration Test World", { force: true });
 
-      cy.get('#world-config form select[name="system"]').select(
-        "Star Wars FFG"
-      );
+      cy.get('#world-config form select[name="system"]').select("Star Wars FFG");
 
       cy.get('#world-config form [type="submit"]').click();
     });
 
     // Launch the world
-    cy.get(
-      '[data-package-id="integration-test-world"] button[data-action="launchWorld"]'
-    ).click();
+    cy.get('[data-package-id="integration-test-world"] button[data-action="launchWorld"]').click();
   });
 }
 
@@ -192,11 +176,7 @@ function join(user = "Gamemaster") {
 function waitUntilReady() {
   // Verify that both the game and canvas are ready before continuing
   cy.window().its("game").and("have.property", "ready").and("be.true");
-  cy.window()
-    .its("game")
-    .should("have.property", "canvas")
-    .and("have.property", "ready")
-    .and("be.true");
+  cy.window().its("game").should("have.property", "canvas").and("have.property", "ready").and("be.true");
 
   // Re-add if the FFG system doesn't seem initialized as this is close to the
   // last thing added during initialization
@@ -221,9 +201,7 @@ function activateModules() {
     }
 
     cy.get('#module-list [data-module-id="ffg-star-wars-enhancements"]');
-    cy.get(
-      '#module-list [data-module-id="ffg-star-wars-enhancements"] input[type="checkbox"]'
-    ).check();
+    cy.get('#module-list [data-module-id="ffg-star-wars-enhancements"] input[type="checkbox"]').check();
 
     // Accept the dialog to select all dependencies
     cy.get(".window-content > .dialog-buttons > .yes").click();
@@ -261,13 +239,9 @@ describe.only("ffg-star-wars-enhancements", () => {
       if ($directoryList.find(".folder").length == 0) {
         return;
       }
-      cy.get("#journal > .directory-list header h3")
-        .contains("Opening Crawls")
-        .rightclick();
+      cy.get("#journal > .directory-list header h3").contains("Opening Crawls").rightclick();
 
-      cy.get("#context-menu > .context-items > .context-item")
-        .contains("Delete All")
-        .click();
+      cy.get("#context-menu > .context-items > .context-item").contains("Delete All").click();
 
       // Confirm
       cy.get(".window-content > .dialog-buttons > .yes").click();
@@ -290,9 +264,7 @@ describe.only("ffg-star-wars-enhancements", () => {
     cy.get('[data-tool="opening-crawl"]').click();
 
     // Launch the opening crawl
-    cy.get(
-      '#ffg-star-wars-enhancements-opening-crawl-select form button[type="submit"]'
-    ).each(($button) => {
+    cy.get('#ffg-star-wars-enhancements-opening-crawl-select form button[type="submit"]').each(($button) => {
       if ($button.text() == "Launch") {
         $button.click();
       }
@@ -301,15 +273,11 @@ describe.only("ffg-star-wars-enhancements", () => {
     cy.get("#ffg-star-wars-enhancements-opening-crawl").should("be.visible");
 
     // Verify the image at the bottom of the crawl exists
-    cy.get(
-      "#ffg-star-wars-enhancements-opening-crawl .backgroundSpace img"
-    ).should("exist");
+    cy.get("#ffg-star-wars-enhancements-opening-crawl .backgroundSpace img").should("exist");
 
     // Purely to capture some of the crawl on video
     cy.wait(10000);
 
-    cy.get(
-      "#ffg-star-wars-enhancements-opening-crawl .header-button.close"
-    ).click();
+    cy.get("#ffg-star-wars-enhancements-opening-crawl .header-button.close").click();
   });
 });
