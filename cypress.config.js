@@ -1,4 +1,4 @@
-const { defineConfig } = require('cypress');
+const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
@@ -7,14 +7,17 @@ module.exports = defineConfig({
      * https://stackoverflow.com/questions/47262338/overriding-configuration-variables-from-cypress-env-json
      */
     setupNodeEvents(on, config) {
-      if (config.hasOwnProperty("env") && config.env.hasOwnProperty("baseUrl")) {
+      if (
+        config.hasOwnProperty("env") &&
+        config.env.hasOwnProperty("baseUrl")
+      ) {
         config.baseUrl = config.env.baseUrl;
       }
       return config;
     },
-    baseUrl: 'http://localhost:30000',
+    baseUrl: "http://localhost:30000",
   },
   viewportWidth: 1440,
   viewportHeight: 900,
-  defaultCommandTimeout: 60000
+  defaultCommandTimeout: 60000,
 });
