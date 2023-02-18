@@ -29,7 +29,7 @@
             <select name="hyperspace_enter">
                 <option value=""></option>
                 {{#each scenes as |scene|}}
-                <option value="{{scene.id}}" {{#if scene.enter}}selected="selected"{{/if}}">{{scene.name}}</option>
+                <option value="{{scene.id}}" {{#if scene.enter}}selected="selected"{{/if}}>{{scene.name}}</option>
                 {{/each}}
             </select>
         </div>
@@ -40,7 +40,7 @@
             <select name="hyperspace_exit">
                 <option value=""></option>
                 {{#each scenes as |scene|}}
-                <option value="{{scene.id}}" {{#if scene.exit}}selected="selected"{{/if}}">{{scene.name}}</option>
+                <option value="{{scene.id}}" {{#if scene.exit}}selected="selected"{{/if}}>{{scene.name}}</option>
                 {{/each}}
             </select>
         </div>
