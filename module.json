@@ -1,100 +1,100 @@
 {
-  "type": "module",
-  "id": "ffg-star-wars-enhancements",
-  "title": "FFG Star Wars Enhancements",
-  "description": "A collection of enhancements for the amazing FFG Star Wars system",
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    },
-    {
-      "lang": "fr",
-      "name": "French (Community)",
-      "path": "lang/fr.json"
-    }
-  ],
-  "authors": [
-    {
-      "name": "Wrycu"
-    },
-    {
-      "name": "x0d0a"
-    }
-  ],
-  "version": "2.0.1",
-  "compatibility": {
-    "minimum": 10,
-    "verified": "10.291"
-  },
-  "relationships": {
-    "systems": [
-      {
-        "id": "starwarsffg",
-        "manifest": "https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.json",
-        "compatability": {
-          "minimum": "1.80-alpha6",
-          "verified": "1.80-alpha8"
+    "type": "module",
+    "id": "ffg-star-wars-enhancements",
+    "title": "FFG Star Wars Enhancements",
+    "description": "A collection of enhancements for the amazing FFG Star Wars system",
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        },
+        {
+            "lang": "fr",
+            "name": "French (Community)",
+            "path": "lang/fr.json"
         }
-      }
     ],
-    "requires": [
-      {
-        "id": "fxmaster",
-        "type": "module",
-        "compatability": {
-          "minimum": "3.5.2",
-          "verified": "3.5.2"
+    "authors": [
+        {
+            "name": "Wrycu"
+        },
+        {
+            "name": "x0d0a"
         }
-      },
-      {
-        "id": "lib-wrapper",
-        "type": "module",
-        "compatability": {
-          "minimum": "1.12.11.0",
-          "verified": "1.12.11.0"
+    ],
+    "version": "2.0.1",
+    "compatibility": {
+        "minimum": 10,
+        "verified": "10.291"
+    },
+    "relationships": {
+        "systems": [
+            {
+                "id": "starwarsffg",
+                "manifest": "https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.json",
+                "compatability": {
+                    "minimum": "1.80-alpha6",
+                    "verified": "1.80-alpha8"
+                }
+            }
+        ],
+        "requires": [
+            {
+                "id": "fxmaster",
+                "type": "module",
+                "compatability": {
+                    "minimum": "3.5.2",
+                    "verified": "3.5.2"
+                }
+            },
+            {
+                "id": "lib-wrapper",
+                "type": "module",
+                "compatability": {
+                    "minimum": "1.12.11.0",
+                    "verified": "1.12.11.0"
+                }
+            },
+            {
+                "id": "statuscounter",
+                "type": "module",
+                "compatability": {
+                    "minimum": "2.0.15",
+                    "verified": "2.0.15"
+                }
+            }
+        ]
+    },
+    "socket": true,
+    "url": "https://github.com/wrycu/StarWarsFFG-Enhancements",
+    "manifest": "https://github.com/wrycu/StarWarsFFG-Enhancements/releases/latest/download/module.json",
+    "download": "https://github.com/wrycu/StarWarsFFG-Enhancements/releases/download/2.0.1/module.zip",
+    "license": "LICENSE",
+    "readme": "README.md",
+    "esmodules": ["ffg-star-wars-enhancements.js"],
+    "styles": ["styles/opening_crawl.css", "styles/datapads.css", "styles/dice_helper.css", "styles/settings.css"],
+    "packs": [
+        {
+            "name": "ffg-sw-enhanced-scene-ideas",
+            "label": "eFFG.SceneIdeas",
+            "module": "ffg-star-wars-enhancements",
+            "path": "packs/sceneideas.db",
+            "type": "Scene"
+        },
+        {
+            "name": "ffg-sw-enhanced-community-macros",
+            "label": "eFFG.CommunityMacros",
+            "module": "ffg-star-wars-enhancements",
+            "path": "packs/communitymacros.db",
+            "type": "Macro"
+        },
+        {
+            "name": "ffg-sw-enhanced-cantina-patrons",
+            "label": "eFFG.CantinaPatrons",
+            "path": "packs/cantinapatrons.db",
+            "module": "ffg-star-wars-enhancements",
+            "type": "RollTable"
         }
-      },
-      {
-        "id": "statuscounter",
-        "type": "module",
-        "compatability": {
-          "minimum": "2.0.15",
-          "verified": "2.0.15"
-        }
-      }
     ]
-  },
-  "socket": true,
-  "url": "https://github.com/wrycu/StarWarsFFG-Enhancements",
-  "manifest": "https://github.com/wrycu/StarWarsFFG-Enhancements/releases/latest/download/module.json",
-  "download": "https://github.com/wrycu/StarWarsFFG-Enhancements/releases/download/2.0.1/module.zip",
-  "license": "LICENSE",
-  "readme": "README.md",
-  "esmodules": ["ffg-star-wars-enhancements.js"],
-  "styles": ["styles/opening_crawl.css", "styles/datapads.css", "styles/dice_helper.css", "styles/settings.css"],
-  "packs": [
-    {
-      "name": "ffg-sw-enhanced-scene-ideas",
-      "label": "eFFG.SceneIdeas",
-      "module": "ffg-star-wars-enhancements",
-      "path": "packs/sceneideas.db",
-      "type": "Scene"
-    },
-    {
-      "name": "ffg-sw-enhanced-community-macros",
-      "label": "eFFG.CommunityMacros",
-      "module": "ffg-star-wars-enhancements",
-      "path": "packs/communitymacros.db",
-      "type": "Macro"
-    },
-    {
-      "name": "ffg-sw-enhanced-cantina-patrons",
-      "label": "eFFG.CantinaPatrons",
-      "path": "packs/cantinapatrons.db",
-      "module": "ffg-star-wars-enhancements",
-      "type": "RollTable"
-    }
-  ]
 }

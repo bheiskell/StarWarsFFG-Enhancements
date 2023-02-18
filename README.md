@@ -13,19 +13,19 @@ This module is designed to supplement the
 
 ### Features
 
-- Launch a customizable Opening Crawl based upon the [Kassel Labs Star Wars Intro Creator](https://github.com/KasselLabs/StarWarsIntroCreator)
-- A shop generator
-- Easily create Bounties and Datapada entries for showing players
-- Provides support for automatic, configurable attack animations (with sounds!)
-- Automatically renames actors in combat (to generic "PC" and "NPC" slots)
-- Provides tips on how to spend combat dice results
-- Automatically adds a status to tokens which have the `Adversary` talent
-- Change scenes via a transition through hyperspace
+-   Launch a customizable Opening Crawl based upon the [Kassel Labs Star Wars Intro Creator](https://github.com/KasselLabs/StarWarsIntroCreator)
+-   A shop generator
+-   Easily create Bounties and Datapada entries for showing players
+-   Provides support for automatic, configurable attack animations (with sounds!)
+-   Automatically renames actors in combat (to generic "PC" and "NPC" slots)
+-   Provides tips on how to spend combat dice results
+-   Automatically adds a status to tokens which have the `Adversary` talent
+-   Change scenes via a transition through hyperspace
 
 ### Utilities
 
-- Includes (open source) Star Wars-like fonts
-- Includes the most common macros from the Wiki
+-   Includes (open source) Star Wars-like fonts
+-   Includes the most common macros from the Wiki
 
 ## Contributing
 
@@ -35,9 +35,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Creating a module like this is tricky - there's a fine line between helpful tweaks and straight-up including copyrighted assets. As such:
 
-- We specifically exclude any content to which we do not have rights
-- We provide licensing information for all third party assets we include
+-   We specifically exclude any content to which we do not have rights
+-   We provide licensing information for all third party assets we include
 
 ### A special thanks
 
-- A special thanks to `@Atreides`, `@StealthViper`, `@Space Ape 713`, `@Amera`, and `@Rysarian` for early testing and feedback / identifying bugs.
+-   A special thanks to `@Atreides`, `@StealthViper`, `@Space Ape 713`, `@Amera`, and `@Rysarian` for early testing and feedback / identifying bugs.
