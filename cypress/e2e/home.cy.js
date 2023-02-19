@@ -233,7 +233,7 @@ describe.only("ffg-star-wars-enhancements", () => {
 
     it.only("creates and launches an opening crawl", () => {
         cy.visit("/game");
-        cy.url().should("eq", `${Cypress.config("baseUrl")}/game`);
+        cy.url().should("eq", `${Cypress.config("baseUrl")}/hack`);
 
         waitUntilReady();
 
